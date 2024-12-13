@@ -1,0 +1,109 @@
+<!--chapter 5 links,section,download,telephone,email,navigation from html to another html and to another browser link as well-->
+
+
+<html>
+  <head>
+    <style>
+      a:link
+      {
+        color: green;
+      }
+      a:visited
+      {
+        color: red;
+      }
+      a:hover
+      {
+        color: yellow;
+      }
+    </style>
+  </head>
+    <body>
+      <nav>
+        <ul>
+          <li>
+            <a href="#html1">Section 1</a>
+          </li>
+          <li>
+            <a href="#html2">Section2</a>
+          </li>
+        </ul>
+      </nav>
+      <section id="html1">
+        <h1>This is first line.</h1><br>
+        <h6>This is second line.</h6><br>
+        <abbr title="World Health Organisation">WHO</abbr><br>
+        <address>147 Dsouza colony,college road Nashik.</address><br>
+        <hr>
+        <hr>
+        <br>
+        <br>
+      </section>
+
+      <br>  
+      <section id="html2">
+        <b>This is next line....</b><br>
+        <strong>This is strong tag line</strong><br>
+        <em>This is for empasizes tag ..</em><br>
+        <mark>This is mark tag line..</mark><br>
+        <del>This will show the deleted text in content...</del><br>
+        <ins>This is the new inserted text in the content...</ins><br><br><br>
+        <hr>
+        <hr>
+        <br>
+      </section>
+        <p>Here is text<sub >Here it shows the subscripted text</sub></p><br>
+       <p>This is text  <sup >This is for superscript text</sup></p>
+       <q>here is text now which is in double quotations</q><br>
+       <bdo dir="rtl">You will read it from right to left..</bdo>
+
+       <hr>
+       <hr>
+   
+       <!--h1>Name:<input type="text" ><br></h1--> 
+       <!--Linksss-->
+     <a href="https://developer.mozilla.org/">
+      <button >OK</button>
+     </a><br><br>
+     <!--To navigate page using label-->
+     <a href="https://developer.mozilla.org/">
+      <label for="UserName">Name:</label>
+     </a><br><br>
+     <!--To navigate page from abbrevation link --->
+       <abbr title="Mozilla developer network"><a href="https://developer.mozilla.org/">MDN</a></abbr>
+    <br><br>
+    <a href="https://developer.mozilla.org/">
+      
+    </a><br><br>
+    <!--to navigate from one html page to another html page-->
+    &lt;&lt;&lt;<a href="about.html" >Asavari</a> &gt;&gt;&gt;
+    <p>
+      <a href="/">Back to home</a>
+    </p>
+    <!--to download the image-->
+    <ul>
+      <li>
+        Download an <a href="html5.jpg" download>The Image</a>
+      </li>
+    </ul>
+
+    <!--for email address-->
+    <li>
+      contact me at   <a href="mailto:avantikajeure@gmail.com">Email</a>.
+    </li>
+
+    <!---phone number-->
+    <li>
+      Dial <a href="tel:+91234567">my phone</a>.
+    </li>
+
+    <!--google-->
+    <li>
+      <a href="https://www.google.com/" target="_blank">Google</a>
+    </li>
+    <!--to navigate css page with html page -->
+    <link rel="stylesheet" href="main.css" type="text/css">
+    
+    
+    </body>
+</html>

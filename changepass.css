@@ -1,0 +1,242 @@
+/* body
+{
+    /* border-color: black;
+    border-style: solid; *
+
+}
+.loginform form
+{
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    /* border-color: black;
+    border-style: solid; *
+    
+    block-size: 400px;
+}
+.square 
+{
+    /* position: absolute;
+    top: 300px;
+    left: 600px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large; *
+    border-color: black;
+    margin-top:10px ;
+    box-sizing: border-box;
+    /* border-style: solid; */
+    
+    /* block-size: 400px; 
+} */
+
+
+/* The Modal (background) */
+
+body
+{
+    overflow: visible;
+    background-color:whitesmoke;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    left: 200px;
+    top: 400px;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+    overflow: visible;
+   
+    
+  }
+  
+  .psw
+  {
+    position: absolute;
+    right: 3px;
+    top: 12px;
+  }
+.cancelbtn
+{
+    position: absolute;
+    top: 10px;
+    
+}
+  .container1
+  {
+    position: absolute;
+    top: 380px;
+    width: 100%;
+    height: 40px;
+  }
+  .container label,input
+  {
+    position: absolute;
+    left: 90px;
+    margin-top: 30px;
+    /* top: 530px; */
+    
+  }
+  /* #loginbtn
+  {
+    position: relative;
+    left: 90px;
+    /* margin-top: 30px; *
+    top: 700px;
+  } */
+  /* .imgcontainer img
+  {
+    position: absolute;
+    left: 40px;
+  } */
+
+  #sub
+  {
+    background-color: #fff;
+    position: relative;
+    top: 110px;
+    left: 145px;
+    height: 50px;
+    width: 100px;
+    border-radius: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: bolder;
+  }
+  #sub:hover
+  {
+    color:gray;
+  }
+  #remember
+  {
+    position: absolute;
+    top: 400px;
+    left: 100px;
+  }
+  .check
+  {
+    position: absolute;
+    left: 1px;
+  }
+  /* Modal Content/Box */
+  .modal-content {
+    background-color:gainsboro;
+    margin: 105px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 400px; /* Could be more or less, depending on screen size */
+    height: 500px;
+    position: absolute;
+    left: 500px;
+    border-color: rgb(5, 52, 53);
+    border-width: 4px;
+    border-radius: 30px;
+    
+}
+  
+  /* The Close Button */
+  .close {
+    /* Position it in the top right corner outside of the modal */
+    /* position: absolute;
+    right: 560px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold; */
+
+    cursor: pointer;
+  position: absolute;
+  top: 120px;
+  right: 600px;
+  padding: 12px 16px;
+  transform: translate(0%, -50%);
+  height: 10px;
+  width: 10px;
+  }
+  
+  /* Close button on hover */
+  .close:hover,
+  .close:focus {
+    /* color: red;
+    cursor: pointer; */
+  background: #464646;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+  }
+  
+  @keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+  }
+
+  .imgcontainer img
+  {
+    border-radius: 100%;
+  margin-left: 100px;
+  margin-top: 10px;
+    /* position: absolute; */
+    left: 20px;
+  }
+
+  nav
+{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(74, 94, 89);
+}
+label.logo
+{
+  font-size: 35px;
+  font-weight: bold;
+  color: #fff;
+  padding: 0%;
+  line-height: 80px;
+}
+nav ul
+{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  float: right;
+  margin-right: 40px;
+}
+nav li
+{
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+nav a
+{
+  color: #fff;
+  font-size: 18px;
+  /* text-transform: uppercase; */
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 3px;
+}
+
+a.dactive,a:hover
+{
+  border: 1px solid white;
+  transition: .5s;
+}

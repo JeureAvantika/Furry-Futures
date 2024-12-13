@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="createapptadmin.css">
+<link rel="stylesheet" href="adminmain.css">
+</head>
+<body>
+    <div class="leftpanel"></div>
+<div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">Adoption From shelter</a>
+    <a href="#">Giving to Shelter</a>
+    <a href="#">Suggestion</a>
+    <a href="#">Meet And Play </a>
+    <a class="view" href="example.html" >view</a>
+    <a class="create" href="createapptadmin.html" >Create</a>
+
+    </div>
+
+    
+     
+  
+
+ 
+
+  <button class="openbtn" onclick="openNav()">☰ </button>  
+ <div class="rectangle">Furry Futures Admin Panel</div>
+  <script>
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+  </script>
+    <div class="container">
+        <form >
+            <div class="user-box">
+        <label style="position: relative;top: -10px;">Date</label><br/>
+        <input type="date" name="date" id="dat" required>
+      
+        </div>
+        <div class="user-box">
+        <label style="position: relative;left: -10px;">From Time</label>
+        <input type="time" name="fromTime" id="fromTime">
+       
+    </div>
+    <div class="user-box">
+       <label style="position: relative;left: -10px;">To Time</label>
+        <input type="time" name="toTime" id="toTime">
+        <br/><br/>
+    </div>
+        <button id="btn" type="button">Submit</button>
+        <br><br><br><br>
+        </form>
+    </div>
+
+   <!-- <div class="login-box">
+ 
+        <form>
+          <div class="user-box">
+            <input type="text" name="" required="">
+            <label>Username</label>
+          </div>
+          <div class="user-box">
+            <input type="password" name="" required="">
+            <label>Password</label>
+          </div><center>
+          <a href="#">
+                 SEND
+             <span></span>
+          </a></center>
+        </form>
+      </div> -->
+
+    <!-- Firebase JavaScript SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDwVDxg5pGDYHtaKKPclI0Pa0QJa2m5pQA",
+            authDomain: "furry-futures.firebaseapp.com",
+            projectId: "furry-futures",
+            storageBucket: "furry-futures.appspot.com",
+            messagingSenderId: "1046190528030",
+            appId: "1:1046190528030:web:6ce7508cfee79d59d8c00f"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Event listener for button click
+        document.getElementById('btn').addEventListener('click', async function() {
+            const date = document.getElementById('dat').value;
+            const fromTime = document.getElementById('fromTime').value;
+            const toTime = document.getElementById('toTime').value;
+
+            try {
+                // Add a new document with a generated ID to the "appointments" collection
+                await addDoc(collection(db, "appointmentDate"), {
+                    date: date,
+                    fromTime: fromTime,
+                    toTime: toTime
+                });
+                alert('Data submitted successfully!');
+                // Optionally, clear the form fields after submission
+                document.getElementById('dat').value = '';
+                document.getElementById('fromTime').value = '';
+                document.getElementById('toTime').value = '';
+            } catch (error) {
+                console.error("Error adding document: ", error);
+                alert('An error occurred while submitting the data.');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <link rel="stylesheet" href="page3.css">
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <div class="panel">
+        <!-- <img src="img/paw.jpg" alt="dogss"> -->
+        <a href="index.html">HOME</a>
+    </div>
+    <div class="aboutus">
+        <a href="pageabout.html">ABOUTUS</a>
+    </div>
+    <div class="findpet">
+        <h4>FindPet</h4>
+        <!-- <a href="mainPage.html">HOME</a> -->
+    </div>
+    <div class="register">
+        <h4>Register</h4>
+    </div>
+    <div class="meetplay">
+        <h4>Meet&Play</h4>
+    </div>
+    <div class="suggestion">
+        <h4>Suggestion</h4>
+    </div>
+
+   
+    <div class="row">
+        <div class="column">
+          <img src="img/dog1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/dog2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/meetplaydog.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+        </div>
+        <div class="column">
+          <img src="img/dog3.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+        </div>
+      </div>
+      
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img src="img/dog1.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img src="img/dog2.jpg" style="width:100%">
+          </div>
+      
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img src="img/meetplaydog.jpg" style="width:100%">
+          </div>
+          
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img src="img/dog3.jpg" style="width:100%">
+          </div>
+          
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+      
+      
+          <div class="column">
+            <img class="demo cursor" src="img/dog1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/dog2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/meetplaydog.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="img/dog3.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+          </div>
+        </div>
+      </div>
+
+   
+      <script>
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+            
+</body>
+</html>
+
+
+<!-- 
+<div >
+    <h1>FIND <br><br>YOUR <br><br>NEW <br><br>
+    BEST <br><br> FRIEND!!</h1>
+</div> -->
+<!-- <script>
+    var modal=document.getElementById("mydog2");
+    var img=document.getElementById("dog2");
+    var modalImg = document.getElementById("dogimg2");
+   
+    var captionText = document.getElementById("caption2");
+img.onclick = function(){
+modal.style.display = "block";
+modalImg.src = this.src;
+captionText.innerHTML = this.alt;
+}
+    var span = document.getElementsByClassName("close2")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+modal.style.display = "none";
+
+
+}
+
+var modal=document.getElementById("mydog1");
+        var img=document.getElementById("dog1");
+        var modalImg = document.getElementById("dogimg1");
+       
+        var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+        var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<!-trigger the model
+<img id="dog1" src="img/dog1.jpg"  style="width: 100%;max-width: 300px;">
+   
+<MOdel
+<div id="mydog1" class="model">
+    The close btn
+    <span class="close">&times;</span>
+    model content(img)
+    <img class="model-content" id="dogimg1" src="img/dog1.jpg">
+
+    model caption(img text)
+    <div id="caption">
+        
+    </div>
+</div>
+
+
+
+
+<-trigger the model2
+<img id="dog2" src="img/meetplaydog.jpeg" alt="dog2" style="width: 100%;max-width: 300px;">
+
+MOdel
+<div id="mydog2" class="model2">
+ The close btn
+ <span class="close2">&times;</span>
+ model content(img)
+ <img class="model-content2" id="dogimg2" src="img/meetplaydog.jpeg">
+
+ model caption(img text)
+ <div id="caption2">
+     
+ </div>
+</div-->
+
+ <!-- <div class="dog1">
+      <img src="img/dog1.jpg">
+    </div>
+    <div class="dog2">
+        <img src="img/grpdogs.jpg">
+    </div> 
+    <div class="dog3">
+        <!-- <img src="img/dog3.jpg"> -->

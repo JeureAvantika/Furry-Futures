@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="changepass.css">
+</head>
+<body>
+    <nav>
+        <label class="logo">Furry Futures</label>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a class="cactive" href="findpet.html">Find Pet</a></li>
+            <li><a class="pactive" href="playmeet.html">Play & Meet</a></li>
+
+            <li><a class="ractive" href="suggestion.html">Registration</a></li>
+            <li><a class="bactive" href="pageabout.html">About Us</a></li>
+            <li><a class="eactive" href="suggestion.html">Suggestion</a></li>
+            <li><a class="dactive" href="adminlogin.html">Admin Login</a></li>
+        </ul>
+      </nav> 
+        <!-- Button to open the modal login form -->
+        <!-- <button onclick="document.getElementById('id01').style.display='block'">Login</button> 
+
+        <The Modal -->
+        <!-- <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+        </div> -->
+        
+        <span class="close" onclick="myfunction()">&times;</span>
+                <script>
+                    // var closebtns = document.getElementsByClassName("close");
+                    // var i;
+                    
+                    // for (i = 0; i < closebtns.length; i++) {
+                    //   closebtns[i].addEventListener("click", function() {
+                    //     this.parentElement.style.display = 'none';
+                    //   });
+                    // }
+                    function myfunction()
+                    {
+                        location.replace("index.html")
+                    }
+                </script>
+          
+        <!-- Modal Content -->
+        <form class="modal-content animate" action="">
+            <div class="imgcontainer">
+                <img id="adminlogo" src="img/changepass.jpg" alt="Avatar" class="avatar">
+                </div>
+            
+            <div class="container">
+            <label for="pass"><b>Old Password </b></label> <br>
+            <input  id="oldpass" type="password" placeholder="Enter Old password" name="oldpass" required><br><br>
+
+            <label for="psw"><b> New Password</b></label><br>
+            <input type="password" placeholder="Enter New Password" name="newpass" required><br><br>
+
+            <button disabled id="sub" type="submit"onclick="alert('Your password is changes succesfully.')">Submit</button><br><br>
+           <script>
+          const submitButton=document.getElementById("sub");
+          
+          const input=document.getElementById("oldpass");   
+          input.addEventListener("keyup",(e)=>{
+            const value=e.currentTarget.value;
+            if(value==="")
+            {
+                submitButton.disabled=true;
+            }
+            else
+            {
+                submitButton.disabled=false;
+            }
+          })
+           </script>
+            <!-- <label > -->
+                 <!-- <div class="check">  input type="checkbox" checked="checked" name="remember">  -->
+                <!-- <label for="remember">Remember Me</label> -->
+            <!-- </div> -->
+                 
+            <!-- </label> -->
+            </div>
+<br><br><br><br><br>
+            <!-- <div class="container1" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Change <a href="changepass.html">password?</a></span>
+            </div> -->
+        </form>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+            </script>
+</body>
+</html>

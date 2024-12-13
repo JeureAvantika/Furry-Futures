@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="adminmain.css">
+</head>
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head >
+  
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <link rel="stylesheet" href="adminmain.css">
+     
+  </head>
+  
+  <body>
+      <div class="leftpanel"></div>
+      <div id="mySidepanel" class="sidepanel">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="viewtoadopt.html">Adoption From shelter</a>
+          <a href="viewtogive.html">Giving to Shelter</a>
+          <a href="viewsugg.html">Suggestion</a>
+          <a href="#">Meet And Play </a>
+            <a class="view" href="example.html" >view</a>
+            <a class="create" href="createapptadmin.html" >Create</a>
+           
+            <!-- <li>
+            <a class="view" href="example.html" style="font-size:large;.view:hover{ color: #f1f1f1;}">View</a>
+            <a class="create" href="#" style="font-size:large;">Create</a>
+          </li> -->
+          
+        </div>
+        
+        <button class="openbtn" onclick="openNav()">☰ </button>  
+       <div class="rectangle">Furry Futures Admin Panel</div>
+        <script>
+        function openNav() {
+          document.getElementById("mySidepanel").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidepanel").style.width = "0";
+        }
+        </script>
+      <div>
+      <div>
+              <!-- Table to display appointments -->
+          <table id="appointmentTable" border="1" style="position: relative; left: 500px;" >
+              <thead>
+                  <tr>
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Contact</th>
+                      <th>City</th>
+                      <th>Suggession</th>                    
+                  </tr>
+              </thead>
+              <tbody id="appointmentTableBody">
+                   <!-- Table body content will be inserted dynamically -->
+              </tbody>
+          </table>
+  
+      </div>
+      
+      <script type="module">
+          // Import the functions you need from the SDKs you need
+          import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+          import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+        
+          // Your web app's Firebase configuration
+          const firebaseConfig = {
+              apiKey: "AIzaSyDwVDxg5pGDYHtaKKPclI0Pa0QJa2m5pQA",
+              authDomain: "furry-futures.firebaseapp.com",
+              projectId: "furry-futures",
+              storageBucket: "furry-futures.appspot.com",
+              messagingSenderId: "1046190528030",
+              appId: "1:1046190528030:web:6ce7508cfee79d59d8c00f"
+          };
+        
+          // Initialize Firebase
+          const app = initializeApp(firebaseConfig);
+  
+          // var fn = document.getElementById('01');
+          // var ln = document.getElementById('02');
+          // var phon = document.getElementById('03');
+          // var city = document.getElementById('04');
+          // var sub = document.getElementById('05');
+  
+          (async function() {
+              const db = getFirestore(app);
+              const suggestionList = collection(db, 'suggession');
+              const querySnapshot = await getDocs(suggestionList);
+              const dataContainer = document.getElementById('appointmentTableBody');
+  
+              querySnapshot.forEach((doc) => {
+                  const data = doc.data();
+                  const div = document.createElement('tr');
+                  div.innerHTML = `
+                      <td>${data.sname}</td>
+                      <td>${data.lnam}</td>
+                      <td>${data.phon}</td>
+                      <td>${data.cit}</td>
+                      <td>${data.sub}</td>
+                  `;
+                  dataContainer.appendChild(div);
+              });
+          })();
+      </script>
+  </body>
+  </html>
+</body>
+</html>
+
+<!-- <div class="leftpanel"></div>
+<div id="mySidepanel" class="sidepanel">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <a href="#">Adoption From shelter</a>
+    <a href="#">Giving to Shelter</a>
+    <a href="#">Suggestion</a>
+    <a href="#">Meet And Play </a>
+    <a class="view" href="example.html" >view</a>
+    <a class="create" href="createapptadmin.html" >Create</a>
+
+    </div>
+
+    
+     
+  
+
+ 
+
+  <button class="openbtn" onclick="openNav()">☰ </button>  
+ <div class="rectangle">Furry Futures Admin Panel</div>
+  <script>
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+  </script> -->

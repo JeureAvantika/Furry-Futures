@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="adminmain.css">
+    
+</head>
+<body>
+    <div class="leftpanel"></div>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">Adoption From shelter</a>
+        <a href="#">Giving to Shelter</a>
+        <a href="#">Suggestion</a>
+        <a href="#">Meet And Play </a>
+          <a class="view" href="example.html" >view</a>
+          <a class="create" href="createapptadmin.html" >Create</a>
+         
+          <!-- <li>
+          <a class="view" href="example.html" style="font-size:large;.view:hover{ color: #f1f1f1;}">View</a>
+          <a class="create" href="#" style="font-size:large;">Create</a>
+        </li> -->
+        
+      </div>
+      
+      <button class="openbtn" onclick="openNav()">☰ </button>  
+     <div class="rectangle">Furry Futures Admin Panel</div>
+      <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+      </script>
+    <div>
+        <!-- Table to display appointments -->
+        <div class="table">
+        <table id="appointmentTable" border="1" style="position: relative;left: 500px;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                    <th>Delete Records</th>
+                </tr>
+            </thead>
+            <tbody id="appointmentTableBody">
+                 <!-- Table body content will be inserted dynamically -->
+            </tbody>
+        </table>
+    </div>
+</div>
+    <!-- Firebase JavaScript SDK -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+        import { getFirestore, collection, getDocs, deleteDoc, query, where } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyDwVDxg5pGDYHtaKKPclI0Pa0QJa2m5pQA",
+            authDomain: "furry-futures.firebaseapp.com",
+            projectId: "furry-futures",
+            storageBucket: "furry-futures.appspot.com",
+            messagingSenderId: "1046190528030",
+            appId: "1:1046190528030:web:6ce7508cfee79d59d8c00f"
+        };
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        // Reference to the table body
+        const tableBody = document.getElementById('appointmentTableBody');
+
+        // Function to fetch data from Firestore and populate the table
+        async function fetchAppointments() {
+            tableBody.innerHTML = ''; // Clear the table body before populating
+
+            // Fetch data from Firestore
+            const querySnapshot = await getDocs(collection(db, "appointments"));
+            querySnapshot.forEach((doc) => {
+                const appointment = doc.data(); // Get the appointment data
+
+                // Create a new table row with appointment data
+                const newRow = document.createElement('tr');
+                newRow.innerHTML = `
+                    <td>${appointment.username}</td>
+                    <td>${appointment.email}</td>
+                    <td>${appointment.phone}</td>
+                    <td>${appointment.date}</td>
+                    <td>${appointment.time}</td>
+                    <td>Booked</td>
+                    <td class="dlt" data-email="${appointment.email}">Delete</td>
+                `;
+                tableBody.appendChild(newRow); // Append the new row to the table
+            });
+        }
+        fetchAppointments();
+
+        // Event listener for delete button
+        document.addEventListener('click', async function(event){
+            if(event.target.classList.contains('dlt')){
+                const emailToDelete = event.target.getAttribute('data-email');
+                const querySnapshot = await getDocs(query(collection(db, "appointments"), where("email", "==", emailToDelete)));
+                querySnapshot.forEach((doc) => {
+                    deleteDoc(doc.ref);
+                    // alert("Data Deleted !!");
+                });
+
+                // Delete selected date and time from appointmentDate
+                const selectedDoc = await getDocs(query(collection(db, "appointmentDate"), where("date", "==", date), where("fromTime", "==", time.split(" - ")[0]), where("toTime", "==", time.split(" - ")[1])));
+                selectedDoc.forEach((doc) => {
+                    deleteDoc(doc.ref);
+                });
+                
+                //fetchAppointments(); // Refresh appointments after deletion
+            }
+        });
+    </script>
+</body>
+</html>

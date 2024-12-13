@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="pageabout.css">
+</head>
+<body>
+
+
+
+<!--div class="panel">
+    <h2>Furry Futures!!</h2>
+    <p>Welcome to the Furry Futures..  <br>
+        Here we adopt,cherish and love... <br>
+        Our motto is to spread the happiness towords everyone.. <br>
+        Our motto is to give new home to the great creatures.. 
+    </p>
+    <img src="img/goldenretriver.jpg" alt="">
+    <! <a href="#" class="btn">Learn More</a> --
+    
+</div--
+<div>
+ <nav>
+        <label class="logo">Furry Futures</label>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a class="cactive" href="findpet.html">Find Pet</a></li>
+          <li><a class="ractive" href="suggestion.html">Registration</a></li>
+          <li><a class="bactive" href="pageabout.html">About Us</a></li>
+          <li><a class="eactive" href="suggestion.html">Suggestion</a></li>
+          <li><a class="dactive" href="adminlogin.html">Admin Login</a></li>
+        </ul>
+      </nav> 
+<!-- <div class="backgroundpage"></div> --
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+<div class="slide-container">
+  <img src="img/imgslideraboutus/yash1.jpeg" alt=""><br>
+  <img src="img/imgslideraboutus/pathak1.jpeg" alt=""><br>
+  <img src="img/imgslideraboutus/avni1.jpeg" alt=""><br>
+  <img src="img/imgslideraboutus/yash2.jpeg" alt=""><br>
+  <img src="img/imgslideraboutus/pathak2.jpeg" alt=""><br>
+  <img src="img/imgslideraboutus/avni2.jpeg" alt=""><br>
+  <img src="img/imgslideraboutus/sweety.jpeg" alt=""><br>
+  <img src="img/imgslideraboutus/pathak3.jpeg" alt=""><br>
+  <img src="img/imgslideraboutus/avni3.jpg" alt=""><br>
+
+
+
+</div>
+
+
+</body>
+</html-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="pageabout.css">
+</head>
+<body>
+  <nav>
+    <label class="logo">Furry Futures</label>
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a class="cactive" href="findpet.html">Find Pet</a></li>
+      <li><a class="ractive" href="registration.html">Registration</a></li>
+      <li><a class="bactive" href="pageabout.html">About Us</a></li>
+      <li><a class="pactive" href="playmeet.html">Play & Meet</a></li>
+
+      <li><a class="eactive" href="suggestion.html">Suggestion</a></li>
+      <li><a class="dactive" href="about.html">Admin Login</a></li>
+    </ul>
+  </nav>
+
+  <div class="slide-container">
+    <div class="slides">
+    <img id="img3"  src="img/imgslideraboutus/pathak1.jpeg" alt=""><br>
+    <img id="img4" src="img/imgslideraboutus/yash1.jpeg" alt=""><br>
+    <img id="img2" src="img/imgslideraboutus/avni1.jpeg" ><br>
+    <img id="img5" src="img/imgslideraboutus/avni2.jpg" alt=""><br>
+    <img id="img6" src="img/imgslideraboutus/pathak2.jpeg" alt=""><br>
+    <img id="img7" src="img/imgslideraboutus/yash2.jpeg" alt=""><br>
+    <!-- <img id="img8" src="img/imgslideraboutus/avni3.jpeg" alt=""><br> -->
+    <!-- <img id="img9" src="img/imgslideraboutus/avni4.jpeg" alt=""><br> -->
+  
+    </div>
+    <br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <div class="buttons">
+      <span class="next">&#10095;</span>
+      <span class="prev">&#10094;</span>
+
+    </div>
+    
+    <!-- <div class="dotsContainer">
+      <div class="dot active"  attr="0"></div>
+      <div class="dot" attr="1"></div>
+      <div class="dot" attr="2"></div>
+      <div class="dot" attr="3"></div>
+      <div class="dot" attr="4"></div>
+      <div class="dot" attr="5"></div>
+      <div class="dot" attr="6"></div>
+      <!- <div class="dot" attr="7"></div>
+      <div class="dot" attr="8"></div> --
+
+
+    </div> -->
+
+  </div>
+<script>
+  let slideImages=document.querySelectorAll('img');
+  let next=document.querySelector('.next');
+  let prev=document.querySelector('.prev');
+  let dots=document.querySelectorAll('.dot')
+  var counter=0;
+  next.addEventListener('click',slideNext);
+  function slideNext()
+  {
+    slideImages[counter].style.animation='next1 0.5s ease-in forwards';
+    if(counter>=slideImages.length-1)
+    {
+      counter=0;
+    }
+    else
+    {
+      counter++;
+    }
+    slideImages[counter].style.animation='next2 0.5s ease-in forwards';
+
+  }
+
+  //code for prev btn
+  prev.addEventListener('click',slidePrev);
+  function slidePrev()
+  {
+    slideImages[counter].style.animation='prev1 0.5s ease-in forwards';
+    if(counter==0)
+    {
+      counter=slideImages.length-1;
+    }
+    else
+    {
+      counter--;
+    }
+    slideImages[counter].style.animation='prev2 0.5s ease-in forwards';
+
+  }
+  //autosliding
+  function autosliding()
+  {
+    deletInterval=setInterval(timer,1500);
+    function timer()
+    {
+      slideNext();
+    }
+  }
+  autosliding();
+</script>
+
+<div class="Philosophy">
+<div class="grp">
+  <h1>Our Philosophy</h1>
+  <p>
+    "At <b>Furry Futures</b>, our mission is more than just finding homes for dogs in need. <br>
+     We are dedicated to creating a compassionate and supportive environment where  <br>
+     every dog has the chance to thrive and find their forever family. <br> <br><br>
+     We aim to foster a sense of community by bringing together <br>
+      like-minded individuals who share our love for animals. <br> <br><br>
+      We believe that every dog deserves a loving home. <br> 
+       By facilitating adoptions, we match dogs with caring individuals or <br>
+      families who are committed to providing them with the love and care they deserve." <br>
+  </p>
+  <img src="img/imgslideraboutus/grp.jpg" alt="">
+</div>
+</div>
+
+<!-- footer -->
+
+<div class="border">
+  <img src="img/border.jpg">
+</div>
+
+
+<div class="rectangle2">
+  <img src="img/finallogo.jpg" alt="">
+<h2 id="loc">Location: 
+  <h3 id="loch3">Nashik,<br> 422005</h3>
+
+<h2 id="hrs">Our Hours:</h2>
+<h3 id="hrsh3">MON-FRI 09:00 – 19:00<br>SAT-SUN 10:00 – 14:00</h3>
+
+<h2 id="contact">Contact Info:</h2>
+<h3 id="contacth3">Phone: + 1 800 755 60 <br>Email: email@email.com</h3>
+<!-- <a class="loginbtn" href="adminlogin.html">Admin Login -->
+
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+ 
+
+</body>
+</html>

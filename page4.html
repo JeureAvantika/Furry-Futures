@@ -1,0 +1,239 @@
+<!-- <!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title> 
+    <link rel="stylesheet" href="page4.css">
+</head>
+<body>
+    
+    <div class="gallery-container">
+        <div class="gallery-item" data-index="1" ><img src="img/goldenretriver.jpg" alt=""></div>
+        <div class="gallery-item" data-index="2" ><img src="img/dog2.jpeg" alt=""></div>
+        <div class="gallery-item" data-index="3"><img src="img/dog1.jpg" alt=""></div>
+        <div class="gallery-item" data-index="4"><img src="img/meetplaydog.jpeg" alt=""></div>
+        <div class="gallery-item" data-index="5"><img src="img/grpdogs.jpg" alt=""></div>
+        <div class="gallery-item" data-index="6"><img src="img/dog2.jpeg" alt=""></div>
+        <div class="gallery-item" data-index="7"><img src="img/Screenshot (10).png" alt=""></div>
+        <div class="gallery-item" data-index="8"><img src="img/diableddog.jpg" alt=""></div>
+        <div class="gallery-item" data-index="9"><img src="img/dog3.jpg" alt=""></div>
+
+    </div>
+<script>
+    const galleryItem=document.getElementsByClassName("gallery-item");
+    //create element for lightbox
+    const lightBoxContainer=document.createElement("div");
+    //for basic area
+    const lightBoxContent=document.createElement("div");
+    //for images
+    const lightBoxImg=document.createElement("img");
+    //for prev btn to chnage imges
+    const lightBoxPrev=document.createElement("div");
+    //for nextbtn
+    const lightBoxNext=document.createElement("div");
+
+
+    //create classlist
+    lightBoxContainer.classList.add('lightbox');
+    lightBoxContent.classList.add('lightbox-content');
+    lightBoxPrev.classList.add("fa","fa-angle-left","lightbox-prev");
+    lightBoxContainer.classList.add("fa","fa-angle-right","lightbox-next");
+
+    lightBoxContainer.appendChild(lightBoxContent);
+    lightBoxContent.appendChild(lightBoxImg);
+    lightBoxContent.appendChild(lightBoxPrev);
+    lightBoxContent.appendChild(lightBoxNext);
+    document.body.appendChild(lightBoxContainer);
+
+    let index=1;
+
+    //create function
+    function showLightBox(n)
+    {
+        if(n>galleryItem.length)
+        {
+            index=1;
+        }
+        else if(n<1)
+        {
+            index=galleryItem.length;
+        }
+        let imageLocation=galleryItem[index-1].children[0].getAttribute("src");
+        lightBoxImg.setAttribute("src",imageLocation);
+    }
+    function currentImage()
+    {
+        lightBoxContainer.style.display="block";
+        let imageIndex=parseInt(this.getAttribute("data-index"));
+        showLightBox(index=imageIndex);
+    }
+    for(let i=0; i<galleryItem.length; i++)
+    {
+        galleryItem[i].addEventListener("click",currentImage);
+    }
+    function sliderImage(n)
+    {
+        showLightBox(index += n);
+    }
+    function prevImage()
+    {
+        sliderImage(-1);
+    }
+    function nextImage()
+    {
+        sliderImage(1);
+    }
+
+    lightBoxPrev.addEventListener("click",prevImage);
+    lightBoxNext.addEventListener("click",nextImage);
+    //close lightbox
+    function closeLightBox()
+    {
+        if(this === event.target)
+        {
+            lightBoxContainer.style.display="none";
+        }
+    }
+    lightBoxContainer.addEventListener("click",closeLightBox);
+</script>
+    
+</body>
+</html--> 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <link rel="stylesheet" href="page4.css">
+</head>
+<body>
+
+    <!-- Images used to open the lightbox -->
+<div class="row">
+    <div class="column">
+      <img src="img/dog1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="img/dog2.jpeg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="img/diableddog.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+    </div>
+    <div class="column">
+      <img src="img/goldenretriver.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+    </div>
+  </div>
+  
+  <!-- The Modal/Lightbox -->
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext">1 / 4</div>
+        <img src="img/dog1.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">2 / 4</div>
+        <img src="img/dog2.jpeg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">3 / 4</div>
+        <img src="img/diableddog.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext">4 / 4</div>
+        <img src="img/goldenretriver.jpg" style="width:100%">
+      </div>
+  
+      <!-- Next/previous controls -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <!-- Caption text -->
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+  
+      <!-- Thumbnail image controls -->
+      <div class="column">
+        <img class="demo" src="img/dog1.jpg" onclick="currentSlide(1)" alt="His name is pluto!!">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img/dog2.jpeg" onclick="currentSlide(2)" alt="Meet Simbaa">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img/diableddog.jpg" onclick="currentSlide(3)" alt="Rocky and Rani">
+      </div>
+  
+      <div class="column">
+        <img class="demo" src="img/goldenretriver.jpg" onclick="currentSlide(4)" alt="Snoww">
+      </div>
+    </div>
+  </div>
+  
+    <script>
+        
+        function openModal()
+         {
+            document.getElementById("myModal").style.display = "block";
+         }
+
+        function closeModal() 
+        {
+           document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) 
+        {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n)
+         {
+             showSlides(slideIndex = n);
+        }
+        function showSlides(n)
+        {
+            var i;
+            var slides=document.getElementsByClassName("mySlides");
+            var dots=document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            
+            if (n > slides.length)
+             {
+                slideIndex = 1
+            }
+            if (n < 1)
+             {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) 
+            {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) 
+            {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+    </script>
+</body>
+</html>

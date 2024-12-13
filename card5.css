@@ -1,0 +1,191 @@
+
+body
+{
+overflow-x: hidden;
+background-color:rgb(155, 173, 163);
+height: 1500px;
+}
+img
+{
+  position: absolute;
+  left: 50px;
+  top: 190px;
+  height: 350px;
+  width: 400px;
+  border-radius: 20px;
+  border-color: black;
+  box-shadow: 15px 15px rgba(139, 239, 206, 0.5);
+  
+}
+img:hover
+{
+   border-width: 5px;
+   border-color: black;
+   border-style: solid;
+}
+
+#img1
+{
+  position: absolute;
+  top: 1000px;
+  left: 20px;
+  width: 450px;
+  height: 400px;
+  box-shadow: 15px 15px rgba(139, 239, 206, 0.5);
+
+}
+
+#img2
+{
+  position: absolute;
+  top: 1000px;
+  left: 530px;
+  width: 450px;
+  height: 400px;
+  box-shadow: 15px 15px rgba(139, 239, 206, 0.5);
+}
+#img3
+{
+  position: absolute;
+  top: 1000px;
+  left: 1050px;
+  width: 450px;
+  height: 400px;
+  box-shadow: 15px 15px rgba(139, 239, 206, 0.5);
+
+}
+h1
+{
+   position: relative;
+   left: 200px;
+   top: 100px;
+   font-family: Arial, Helvetica, sans-serif;
+}
+hr
+{
+   position: relative;
+   top: 700px;
+}
+.vl
+{
+   position: relative;
+   left: 510px;
+   border-left: solid goldenrod;
+   height: 585px;
+   color: black;
+   width: 100px;
+   bottom: 530px;
+}
+.vl2
+{
+   position: absolute;
+   left: 523px;
+   border-left: solid goldenrod;
+   height: 559px;
+   color: black;
+   width: 100px;
+   top: 0px;
+/* bottom: 1900px; */
+}
+
+nav
+{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(74, 94, 89);
+}
+label.logo
+{
+  font-size: 35px;
+  font-weight: bold;
+  color: #fff;
+  padding: 0%;
+  line-height: 80px;
+}
+nav ul
+{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  float: right;
+  margin-right: 40px;
+}
+nav li
+{
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+nav a
+{
+  color: #fff;
+  font-size: 18px;
+  /* text-transform: uppercase; */
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 3px;
+}
+
+a.cactive,a:hover
+{
+  border: 1px solid white;
+  transition: .5s;
+}
+
+
+
+.adoptbtn button
+{
+  position: absolute;
+  height: 50px;
+  width: 200px;
+  left: 1250px;
+  top: 820px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  font-weight: bolder;
+  /* border-radius: 40%; */
+  border-radius: 50px;
+  background-image: linear-gradient(135deg, rgb(26, 224, 175) 0%, rgb(74, 94, 89) 100%);
+  box-shadow: 0 20px 30px -6px rgba(139, 239, 206, 0.5);
+  outline: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.adoptbtn button:hover
+{
+  background-color:rgb(26, 224, 175) ;
+  transform: translateY(3px);
+  box-shadow: none;
+}
+
+.adoptbtn button:active
+{
+  opacity: 0.5;
+
+}
+
+
+#p1
+{
+  position: absolute;
+  left: 560px;
+  top: 150px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-variant: small-caps;
+    font-weight: bold;
+    font-size: x-large;
+}
+#desc
+{
+  position: absolute;
+  top: 600px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: large;
+}
+

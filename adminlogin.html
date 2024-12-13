@@ -1,0 +1,131 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <<title>Document</title> 
+    <link rel="stylesheet" href="adminlogin.css">
+</head>
+<body>
+    
+
+    <div class="square">
+        <div class="loginform">
+            <form action="">
+               <label for="Username"> Username: </label> 
+                <input type="text">
+                <br><br><br>
+                <label for="pass"> Password: </label> 
+                <input type="text">
+    
+            </form>  
+        </div>
+    </div>
+</body>
+</html--> 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="adminlogin.css">
+</head>
+<body>
+    <nav>
+        <label class="logo">Furry Futures</label>
+        <ul>
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a class="cactive" href="findpet.html">Find Pet</a></li>
+            <li><a class="ractive" href="formtoadopt.html">Registration</a></li>
+            <li><a class="pactive" href="playmeet.html">Play & Meet</a></li>
+
+            <li><a class="bactive" href="pageabout.html">About Us</a></li>
+            <li><a class="eactive" href="suggestion.html">Suggestion</a></li>
+            <li><a class="dactive" href="about.html">Admin Login</a></li>
+        </ul>
+      </nav> 
+        <!-- Button to open the modal login form -->
+        <!-- <button onclick="document.getElementById('id01').style.display='block'">Login</button--> 
+
+        <!--The Modal -->
+         <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'"
+        class="close" title="Close Modal">&times;</span>
+        </div> 
+        
+        <!-- <span class="close" onclick="myfunction()">&times;</span>
+                <script>
+                    // var closebtns = document.getElementsByClassName("close");
+                    // var i;
+                    
+                    // for (i = 0; i < closebtns.length; i++) {
+                    //   closebtns[i].addEventListener("click", function() {
+                    //     this.parentElement.style.display = 'none';
+                    //   });
+                    // }
+                    function myfunction()
+                    {
+                        location.replace("index.html")
+                    }
+                </script> -->
+          
+        <!-- Modal Content -->
+        <!-- <form class="modal-content animate" action="">
+            <div class="imgcontainer">
+                <img id="adminlogo" src="img/adminlogo.jpg" alt="Avatar" class="avatar">
+                </div>
+            
+            <div class="container">
+            <label for="uname"><b>Username</b></label> <br> <!-i class="asteric1" style="color: red;position: relative;left: 160px;top: 10px;">*</i>
+            <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+
+            <label for="psw"><b>Password</b></label><br><i class="asteric2" style="color:black;position: relative;left: 160px;top: 30px;">*</i>
+            <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+
+            <button id="loginbtn" type="submit" onclick="myfun2">Login</button><br><br> -->
+            <!-- <script>
+                // let x;
+                function myfun2()
+                {
+                    if(input[type="text"]==="admin"&&input[type="password"]==="pass")
+                    {
+                        location.replace("index.html");
+                    }
+                        // else
+                        // {
+                        //     x="try again";
+                        // }
+
+                }
+            </script> -->   
+            <!-- <label > -->
+                 <!-- <div class="check">  <!--input type="checkbox" checked="checked" name="remember">  
+                <!-- <label for="remember">Remember Me</label> --
+            </div--> 
+                 
+            <!-- </label> -->
+            </div>
+<br><br><br><br><br>
+            <!-- <div class="container1" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Change <a href="changepass.html">password?</a></span>
+            </div> -->
+        </form>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+            </script>
+        </body>
+        </html>

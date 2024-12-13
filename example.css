@@ -1,0 +1,14 @@
+.dlt{
+    cursor: pointer;
+    text-align: center;
+}
+.dlt:hover{
+    color: red;
+}
+.table thead,tr,td,tbody
+{
+    position: absolute;
+    left: 200px;
+    top: 500px;
+    padding-left: -100px;
+}

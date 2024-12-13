@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formtosend.css">
+</head>
+<body>
+    <nav>
+        <label class="logo">Furry Futures</label>
+        <ul>
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a class="cactive" href="findpet.html">Find Pet</a></li>
+          <li><a class="ractive" href="registration.html">Registration</a></li>
+          <li><a class="bactive" href="pageabout.html">About Us</a></li>
+          <li><a class="eactive" href="suggestion.html">Suggestion</a></li>
+          <li><a class="dactive" href="about.html">Admin Login</a></li>
+        </ul>
+      </nav>
+   
+       
+
+    <div class="container">
+      <form id="form1" method="post">
+      <label > Name: </label><br>
+      <input  type="text" name="username" id="name" placeholder="Enter Your Name" required>
+      <br/><br/>
+      <label>Phone Number</label><br/>
+      <input type="text" name="phone" id="name" placeholder="Enter Your mobile Number">
+      <br/><br/>
+      <label >Email</label><br/>
+      <input type="text" name="email" id="name" placeholder="Enter Your Email">
+      <br/><br/>
+      <label>Address</label><br/>
+      <input type="text" name="address" id="name" placeholder="Enter Your Address" style="height: 49px; width: 200px;">
+      <br/><br/>
+      <label>Where are you Found this Dog?</label>
+      <br/>
+      <select id="found">
+        <option value="Street">Street</option>
+        <option value="Buy">Buy</option>
+        <option value="puppy">Home Puppies</option>
+        <option value="other">Other</option>
+      </select>
+      <br/><br/>
+       <label>Breed Age</label>
+       <input type="text" name="phone" id="name" placeholder="Enter age">
+       <br/><br/>
+       <lable> Enter your Dog Information here:</lable>
+       <br/>
+       <input type="text" name="address" id="name" placeholder="Enter Information" style="height: 49px; width: 200px;">
+        <br/><br/>
+        <label>Why You want to giev this dog to the shelter Home? </label><br/> 
+        <label>Reason:</label>&nbsp;
+        <input type="text" name="address" id="name" placeholder="Enter reason" style="height: 49px; width: 200px;">
+        <br/><br/>
+        <label style="position: relative;bottom: 15px;">Upload your dog image here: </label><br/>
+        <input style="position: relative;bottom: 10px;" type="file" id="myfile" name="filename">
+        <br/><br/>
+        <input type="submit" name="submit" id="submit">
+        <br><br><br><br>
+      </form>
+      
+    </form>
+ </div>  
+</body>
+</html>

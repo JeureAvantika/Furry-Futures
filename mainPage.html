@@ -1,0 +1,87 @@
+<!-- < <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title> 
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    <div id="mainpage2"></div>
+    <div class="home">
+        <a href="index.html" ><h2>Home</h2></a> 
+    </div>
+    <div class="findpet">
+        <h2>Find Pet</h2>
+    </div>
+    <div class="register">
+        <h2>Register</h2>
+    </div>
+    <div class="meet">
+        <h2>Meet & Play</h2>
+    </div>
+    <div class="suggestion">
+        <h2>Suggestion</h2>
+    </div>
+
+    <div class="fade-in-image">
+         <img src="img/goldenret2.jpg" width="1700px" height="800px"> 
+     </div>
+     
+     
+</body>
+</html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> 
+    <link rel="stylesheet" href="page2.css">
+</head>
+<body>
+    
+    <div class="panel">
+      <img src="img/Screenshot (12).png" alt="doglogo">
+    </div>
+    
+    <div class="panel2">
+        <a href="index.html"><h3>Home</h3></a>
+       <a href="index.html" ><h3>Find Pet</h3></a>
+       <a href="index.html"><h3>Register</h3></a>
+       <a href="index.html"><h3>Meet & Play</h3></a>
+       <a href="index.html"><h3>Suggestion</h3></a>
+    </div>
+    <div class="panel3">
+       
+    </div>
+
+</body>
+</html>
+
+ -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <link rel="stylesheet" href="main.css">
+ </head>
+ <body>
+    <h1>Show images</h1>
+    <img src=" " id="image">
+    <script type="text/javascript">
+        let image=document.getElementById('image');
+        let images=['dog1.jpg','dog2.jpg','dog3.jpg']
+        setInterval(function()
+        {
+            let random=Math.floor(Math.random()*3);
+            image.src=image[random];
+        },800);
+    </script>
+    
+ </body>
+ </html>

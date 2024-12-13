@@ -1,0 +1,63 @@
+body
+{
+    background-color: rgb(219, 236, 241);
+}
+.container
+{
+    border-radius: 20px;
+    background-color: rgb(219, 236, 241);
+    margin: 5px;
+    width: 900px;
+    height: 1200px;
+    align-items: center;
+    position: relative;
+    left: 250px;
+    border-color: rgb(141, 141, 248);
+    border-style:dotted ;
+}
+p
+{
+    position: relative;
+    top: 130px;
+    left: 100px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: large;
+}
+h1
+{
+    text-align: center;
+    position: relative;
+    top: 80px;
+}
+.btn
+{
+    position: relative;
+    top: 110px;
+    left: 400px;
+    padding: 1rem 2rem;
+ font-weight: 700;
+ background: rgb(255, 255, 255);
+ color: blueviolet;
+ border-radius: .5rem;
+ border-bottom: 2px solid blueviolet;
+ border-right: 2px solid blueviolet;
+ border-top: 2px solid white;
+ border-left: 2px solid white;
+ transition-duration: 1s;
+ transition-property: border-top, 
+    border-left, 
+    border-bottom,
+    border-right,
+    box-shadow;
+}
+.btn:hover
+{
+    
+        border-top: 2px solid blueviolet;
+        border-left: 2px solid blueviolet;
+        border-bottom: 2px solid rgb(238, 103, 238);
+        border-right: 2px solid rgb(238, 103, 238);
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px;
+       
+}

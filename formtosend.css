@@ -1,0 +1,115 @@
+
+.container img
+{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+.container
+ {
+     /* background-color: rgb(159, 157, 157); */
+    width: 600px;
+    height:920px ;
+    position: relative;
+    left:400px;
+    top: 80px;
+    padding: 40px;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid; 
+
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    position: relative;
+    top: 90px;
+   
+}
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+input[type=submit]:hover {
+    background-color: #45a049;
+  }
+.container select
+{
+    width: 200px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border-color:rgb(8, 8, 8);
+    border-style: solid;
+    border-width: 1px;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border-color:rgb(8, 8, 8);
+    border-style: solid;
+    border-width: 1px;
+  }
+.container label
+{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+nav
+{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 80px;
+  width: 100%;
+  background-color: rgb(74, 94, 89);
+}
+label.logo
+{
+  font-size: 35px;
+  font-weight: bold;
+  color: #fff;
+  padding: 0%;
+  line-height: 80px;
+}
+nav ul
+{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  float: right;
+  margin-right: 40px;
+}
+nav li
+{
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+nav a
+{
+  color: #fff;
+  font-size: 18px;
+  /* text-transform: uppercase; */
+  border: 1px solid transparent;
+  padding: 7px 10px;
+  border-radius: 3px;
+}
+
+a.ractive,a:hover
+{
+  border: 1px solid white;
+  transition: .5s;
+}

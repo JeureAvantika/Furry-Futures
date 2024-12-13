@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="adoptfromshelad.css">
+</head>
+<body>
+    <div class="leftpanel"></div>
+    <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="#">Adoption From shelter</a>
+        <a href="#">Giving to Shelter</a>
+        <a href="#">Suggestion</a>
+        <a href="#">Meet And Play</a>
+      </div>
+      
+      <button class="openbtn" onclick="openNav()">☰ </button>  
+     <div class="rectangle">Furry Futures Admin Panel</div>
+      <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+      </script>
+</body>
+</html>
